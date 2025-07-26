@@ -8,4 +8,6 @@ main_menu = {
     0: 'Exit',
     }
 
-tasks = ff.read_file()
+tasks = ff.read_file_tasks()
+
+username = ff.read_file_name()

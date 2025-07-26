@@ -4,6 +4,8 @@ from logic import menu_functions as mf
 while True:
     print("-- To-do App --")
     mf.show_local_time()
+    mf.greet_user()
+    print()
     mf.show_menu(ds.main_menu)
     menu_number = mf.ask_menu_number(ds.main_menu)
     print()

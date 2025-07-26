@@ -1,9 +1,13 @@
 import time as t
 from logic import to_do_functions as tdf
+from data import data_structures as ds
+
+def greet_user():
+    """Greet user by his name from the file or for the first time"""
+    print(f"Hello, {ds.username}!")
 
 def show_local_time():
     print(t.strftime("%d %B %Y, %H:%M"))
-    print()
 
 def show_menu(menu: dict):
     """Show any menu to user"""
