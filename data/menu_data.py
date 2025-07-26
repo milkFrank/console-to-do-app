@@ -5,3 +5,9 @@ main_menu = {
     4: 'Delete tasks',
     0: 'Exit',
     }
+
+tasks = {
+    1: 'Buy bread',
+    2: 'Do homework',
+    3: 'Cook dinner',
+    }

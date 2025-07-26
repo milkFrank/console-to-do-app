@@ -1,4 +1,5 @@
 import time as t
+from logic import to_do_functions as tdf
 
 def show_local_time():
     print(t.strftime("%d %B %Y, %H:%M"))
@@ -30,3 +31,8 @@ def ask_menu_number(menu: dict):
                 "please.")
         else:
             return menu_number
+
+def handle_menu_number(menu_number: int):
+    """Do the action depends on the chosen menu option"""
+    if menu_number == 1:
+        tdf.show_to_do_list()
