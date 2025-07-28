@@ -1,3 +1,11 @@
+import json
+from data import data_structures as ds
+
+def write_file_tasks():
+    """Write tasks dictionary in the file"""
+    with open('data/tasks.json', 'w') as f:
+        json.dump(ds.tasks, f)
+
 def read_file_tasks():
     """Open and read user's tasks. If there is no file — create it."""
     tasks = {}
@@ -5,7 +13,7 @@ def read_file_tasks():
         with open('data/tasks.json') as f:
             tasks = json.load(f)
     except FileNotFoundError:
-        return None
+        return tasks
     else:
         return tasks
 

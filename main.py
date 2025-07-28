@@ -10,6 +10,7 @@ while True:
     menu_number = mf.ask_menu_number(ds.main_menu)
     print()
     if not menu_number: # If user chooses «exit»
+        ff.write_file_tasks()
         break
     else:
         mf.handle_menu_number(menu_number)
