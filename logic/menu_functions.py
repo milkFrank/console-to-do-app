@@ -48,3 +48,5 @@ def handle_menu_number(menu_number: int):
     """Do the action depends on the chosen menu option"""
     if menu_number == 1:
         tdf.show_to_do_list()
+    elif menu_number == 2:
+        tdf.add_tasks()
