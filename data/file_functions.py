@@ -1,6 +1,5 @@
 def read_file_tasks():
     """Open and read user's tasks. If there is no file — create it."""
-    filename = 'tasks.json'
     tasks = {}
     try:
         with open('data/tasks.json') as f:
@@ -10,6 +9,14 @@ def read_file_tasks():
     else:
         return tasks
 
+def write_file_name():
+    """Write user's name in the file"""
+    username = input("Write your name here, please: ")
+    with open('data/username.txt', 'w') as f:
+        f.write(username)
+    print("\n")
+    return username
+
 def read_file_name():
     """Open and read user's name. If there is no name — create it."""
     username = ''
@@ -17,6 +24,8 @@ def read_file_name():
         with open('data/username.txt') as f:
             username = f.read()
     except FileNotFoundError:
-        return None
+        print("It seems like this is your first time opening the program!")
+        username = write_file_name()
+        return username
     else:
         return username.strip()
