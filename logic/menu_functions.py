@@ -3,8 +3,16 @@ from logic import to_do_functions as tdf
 from data import data_structures as ds
 
 def greet_user():
-    """Greet user by his name from the file or for the first time"""
-    print(f"Hello, {ds.username}!")
+    """Return greeting message depending on time"""
+    time = int(t.strftime("%H"))
+    if time >= 0 and time < 6:
+        print(f"Good night, {ds.username}!")
+    elif time >= 6 and time < 12:
+        print(f"Good morning, {ds.username}!")
+    elif time >= 12 and time < 18:
+        print(f"Good afternoon, {ds.username}!")
+    elif time >= 18 and time < 24:
+        print(f"Good evening, {ds.username}!")
 
 def show_local_time():
     print(t.strftime("%d %B %Y, %H:%M"))
