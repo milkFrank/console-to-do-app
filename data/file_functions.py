@@ -13,7 +13,7 @@ def read_file_tasks():
         with open('data/tasks.json') as f:
             data = json.load(f)
             tasks = {int(key): value for key, value in data.items()} # It makes
-            # key the int again, because json can't store keys as int
+            # each key the int again, because json can't store keys as int
     except FileNotFoundError:
         return tasks
     else:
