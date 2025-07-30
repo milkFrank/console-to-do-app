@@ -50,3 +50,5 @@ def handle_menu_number(menu_number: int):
         tdf.handle_to_do_list()
     elif menu_number == 2:
         tdf.add_tasks()
+    elif menu_number == 3:
+        tdf.handle_deletion_tasks()
