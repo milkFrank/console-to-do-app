@@ -8,12 +8,10 @@ def write_file_tasks():
 
 def read_file_tasks():
     """Open and read user's tasks. If there is no file — create it."""
-    tasks = {}
+    tasks = []
     try:
         with open('data/tasks.json') as f:
-            data = json.load(f)
-            tasks = {int(key): value for key, value in data.items()} # It makes
-            # each key the int again, because json can't store keys as int
+            tasks = json.load(f)
     except FileNotFoundError:
         return tasks
     else:
