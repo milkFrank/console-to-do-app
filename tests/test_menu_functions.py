@@ -10,10 +10,10 @@ class MenuFunctionsTestCase(unittest.TestCase):
     @patch('builtins.input',
         side_effect=['igjoasoijgf', '321guy', '!!??&^', '', '2'])
 
-    def test_string_input_in_menu(self, mock_input):
+    def test_check_valid_number(self, mock_input):
         """Should ignore any string inputs that doesn't convert to int-type"""
-        menu_option = mf.ask_menu_number(ds.main_menu)
-        self.assertEqual(menu_option, 2)
+        number = mf.check_valid_number()
+        self.assertEqual(number, 2)
 
 
 if __name__ == '__main__':
