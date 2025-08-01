@@ -55,6 +55,8 @@ def add_tasks():
         task = input("Write new task here (write «0» to go back): ")
         if task == '0':
             break
+        elif task == '':
+            print("You can't add empty task.\n")
         else:
             task = task.title()
             ds.tasks.append(task)
