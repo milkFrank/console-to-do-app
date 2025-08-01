@@ -15,6 +15,15 @@ class MenuFunctionsTestCase(unittest.TestCase):
         number = mf.check_valid_number()
         self.assertEqual(number, 2)
 
+    @patch('builtins.input', side_effect=['15', '-24', '3'])
+
+    def test_menu_number(self, mock_input):
+        """Should ignore any number that not in the menu"""
+        fake_menu = {1: "Action1", 2: "Action2", 3: "Action3"} # Create a fake
+        # menu to show that function works with any menu given
+        menu_option = mf.ask_menu_number(fake_menu)
+        self.assertEqual(menu_option, 3)
+
 
 if __name__ == '__main__':
     unittest.main()
