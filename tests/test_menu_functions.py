@@ -1,7 +1,7 @@
 import unittest
+import os
 from unittest.mock import patch
 from logic import menu_functions as mf
-from data import data_structures as ds
 
 
 class MenuFunctionsTestCase(unittest.TestCase):

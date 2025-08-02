@@ -7,6 +7,6 @@ main_menu = {
     0: 'Exit',
     }
 
-tasks = ff.read_file_tasks()
+tasks = [] # Reading tasks from the file is called in main, but it stores here
+# for the better approach to the list of tasks in other modules
 
-username = ff.read_file_name()

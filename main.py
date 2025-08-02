@@ -1,10 +1,12 @@
 from data import data_structures as ds, file_functions as ff
 from logic import menu_functions as mf
 
+username = ff.read_file_name()
+ds.tasks = ff.read_file_tasks()
 while True:
     print("-- To-do App --")
     mf.show_local_time()
-    mf.greet_user()
+    mf.greet_user(username)
     print()
     mf.show_menu(ds.main_menu)
     menu_number = mf.ask_menu_number(ds.main_menu)
