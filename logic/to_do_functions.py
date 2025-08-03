@@ -1,4 +1,5 @@
 from data import data_structures as ds
+
 from logic import menu_functions as mf
 
 def show_to_do_list():
@@ -11,11 +12,11 @@ def show_to_do_list():
     else:
         print("There is no tasks yet.")
 
-def ask_task_number():
+def ask_task_number(tasks):
     """Ask a task number and check does it exist"""
     while True:
         task_number = mf.check_valid_number()
-        if ((task_number < 0 or task_number > len(ds.tasks)) and
+        if ((task_number < 0 or task_number > len(tasks)) and
             task_number != 0):
             print("---------------------------")
             print("There is no action with that number. Try again, "
@@ -39,7 +40,7 @@ def handle_to_do_list():
             print("\nYou can write the number of task to mark it as "
                 "done/undone.")
             print("Write «0» to go back.")
-            task_number = ask_task_number()
+            task_number = ask_task_number(ds.tasks)
             if task_number == 0:
                 break
             else:
@@ -75,7 +76,7 @@ def handle_deletion_tasks():
         if ds.tasks:
             print("\nYou can write the number of task to delete it.")
             print("Write «0» to go back.")
-            task_number = ask_task_number()
+            task_number = ask_task_number(tasks)
             if task_number == 0:
                 break
             else:

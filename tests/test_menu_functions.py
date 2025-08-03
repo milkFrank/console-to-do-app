@@ -1,5 +1,4 @@
 import unittest
-import os
 from unittest.mock import patch
 from logic import menu_functions as mf
 
