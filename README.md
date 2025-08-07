@@ -1,4 +1,4 @@
-# console-to-do-app
+# Console To-Do App
 A simple CLI (Command Line Interface) app that helps users organize their work with a to-do list. 
 
 ## About the project
