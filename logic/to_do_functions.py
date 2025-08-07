@@ -10,7 +10,7 @@ def show_to_do_list():
             print(f"{number}) {task}")
             number += 1
     else:
-        print("There is no tasks yet.")
+        print("There are no tasks yet.")
 
 def ask_task_number(tasks):
     """Ask a task number and check does it exist"""
@@ -54,12 +54,12 @@ def add_tasks():
     while True:
         print("-- Add Tasks -- ")
         task = input("Write new task here (write «0» to go back): ")
+        task = task.title()
         if task == '0':
             break
         elif task == '':
-            print("You can't add empty task.\n")
+            print("You can't add an empty task.\n")
         else:
-            task = task.title()
             ds.tasks.append(task)
             print(f"Task «{task}» has been added to your to-do list!\n")
 
@@ -76,7 +76,7 @@ def handle_deletion_tasks():
         if ds.tasks:
             print("\nYou can write the number of task to delete it.")
             print("Write «0» to go back.")
-            task_number = ask_task_number(tasks)
+            task_number = ask_task_number(ds.tasks)
             if task_number == 0:
                 break
             else:
